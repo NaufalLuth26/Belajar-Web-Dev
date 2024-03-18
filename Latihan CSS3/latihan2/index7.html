@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FILTER & TRANSITION</title>
+    <style>
+      body {
+        text-align: center;
+        margin-top: 50px auto;
+        font-family: poppins, arial, sans-serif;
+      }
+
+      img {
+        filter: none;
+      }
+      img:hover {
+        filter: hue-rotate(120deg) blur(1px) saturate(10%) opacity(70%);
+        transform: translate(0px, -20px);
+        transition: 1s;
+      }
+
+      /* UNTUK MENGATASI TRANSITION PATAH-PATAH MAKA, ELEMENT YANG AKAN DIUBAH DIMASUKAN KE DALAM CONTAINER */
+      /* CONTOH TRANSISI DENGAN/DALAM CONTAINER */
+      .container {
+        width: 600px;
+        border: 5px solid black;
+      }
+      .kotak {
+        width: 100px;
+        height: 100px;
+        background-color: salmon;
+        text-align: center;
+        line-height: 100px;
+        color: white;
+        margin-top: 5px;
+
+        /* property yang berubah mengikuti transisi hanya transform, dan warna diabaikan */
+
+        /* transition: all 2s ease-out; */
+      }
+
+      .kotak6 {
+        text-align: center;
+        line-height: 50px;
+      }
+      .container:hover .kotak {
+        transform: translate(500px) rotate(360deg);
+        color: red;
+        background-color: royalblue;
+        /* transition: none; */
+      }
+
+      /* CONTOH TRANSISI TANPA CONTAINER */
+      .kotakluar {
+        width: 100px;
+        height: 100px;
+        background-color: skyblue;
+        transition: 3s;
+      }
+      .kotakluar:hover {
+        transform: translate(400px) rotate(360deg);
+      }
+
+      /* CONTOH PENGGUNAAN VALUE FUNCTION EASE, EASE-IN, EASE-OUT, EASE-IN-OUT */
+      .kotak1 {
+        transition: all 3s ease;
+      }
+      .kotak2 {
+        transition: all 3s ease-in;
+      }
+      .kotak3 {
+        transition: all 3s ease-out;
+      }
+      .kotak4 {
+        transition: all 3s ease-in-out;
+      }
+      .kotak5 {
+        transition: all 3s linear;
+      }
+      .kotak6 {
+        transition: all 3s cubic-bezier(0.76, -0.61, 0.59, 1.7);
+      }
+      .kotak7 {
+        transition: background-color 3s, color 2s 5ms, transform 3s 1s;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="NAUFAL.png" alt="naufal" />
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat rem quis
+      laboriosam magni. Quis itaque sapiente sint ad obcaecati et.
+    </p>
+    <div class="kotakluar"></div>
+    <div class="container">
+      <div class="kotak kotak1">ease</div>
+      <div class="kotak kotak2">ease-in</div>
+      <div class="kotak kotak3">ease-out</div>
+      <div class="kotak kotak4">ease-in-out</div>
+      <div class="kotak kotak5">linear</div>
+      <div class="kotak kotak6">cubic-bezier</div>
+      <div class="kotak kotak7">Delay</div>
+    </div>
+  </body>
+</html>

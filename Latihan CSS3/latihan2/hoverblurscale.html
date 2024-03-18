@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coba</title>
+    <style>
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+      }
+      .card {
+        width: 200px;
+        height: 80px;
+        margin: 20px auto;
+        padding: 5px;
+        background-color: lightcoral;
+        text-align: center;
+        font-family: poppins;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        font-weight: bold;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .card {
+        transition: 0.3s;
+      }
+      .card.blue {
+        background-color: rgba(71, 71, 230, 0.8);
+      }
+      .card.lightblue {
+        background-color: rgb(190, 190, 255, 1);
+      }
+      .card.darkblue {
+        background-color: rgb(54, 54, 177);
+      }
+
+      .cards .card:hover {
+        transform: scale(1.1, 1.1);
+      }
+
+      .cards:hover > .card:not(:hover) {
+        filter: blur(10px);
+        transform: scale(0.9, 0.9);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cards">
+      <div class="card blue">Hover Me</div>
+      <div class="card lightblue">Hover Me</div>
+      <div class="card darkblue">Hover Me</div>
+    </div>
+  </body>
+</html>

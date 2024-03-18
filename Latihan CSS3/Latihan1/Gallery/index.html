@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan Lightbox</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>THE KUCING'S</h1>
+    <div class="container">
+      <ul class="gallery">
+        <li>
+          <a href="#gambar1">
+            <img
+              class="gambarkucing2"
+              src="img/thumbs/Kucing1-thumbs.png"
+              alt="Kucing Abu-abu"
+            />
+            <span>Kucing Abu-abu</span>
+          </a>
+
+          <div class="overlay" id="gambar1">
+            <a href="#" class="close">X</a>
+            <a href="#gambar4" class="prev">prev</a>
+            <img src="img/full/Kucing1.png" alt="Kucing Abu-abu" />
+            <a href="#gambar2" class="next">next</a>
+          </div>
+        </li>
+        <li>
+          <a href="#gambar2">
+            <img
+              src="img/thumbs/Kucing2-thumbs.png"
+              alt="Kucing Abu-abu tiduran"
+            />
+            <span>Kucing Abu-abu</span>
+          </a>
+
+          <div class="overlay" id="gambar2">
+            <a href="#gambar1" class="prev">prev</a>
+            <img src="img/full/kucing2.png" alt="Kucing Abu-abu" />
+            <a href="#gambar3" class="next">next</a>
+            <a href="#" class="close">X</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="#gambar3">
+            <img src="img/thumbs/Kucing3-thumbs.png" alt="Kucing oren" />
+            <span>Kucing oren</span>
+          </a>
+
+          <div class="overlay" id="gambar3">
+            <a href="#gambar2" class="prev">prev</a>
+            <img src="img/full/Kucing3.png" alt="Kucing Oren" />
+            <a href="#gambar4" class="next">next</a>
+            <a href="#" class="close">X</a>
+          </div>
+        </li>
+
+        <li>
+          <a href="#gambar4">
+            <img src="img/thumbs/Kucing4-thumbs.png" alt="Kucing Putih" />
+            <span>Kucing Putih</span>
+          </a>
+
+          <div class="overlay" id="gambar4">
+            <a href="#gambar3" class="prev">prev</a>
+            <img src="img/full/Kucing4.png" alt="Kucing Putih" />
+            <a href="#gambar1" class="next">next</a>
+            <a href="#" class="close">X</a>
+          </div>
+        </li>
+        <div class="clear"></div>
+      </ul>
+    </div>
+  </body>
+</html>

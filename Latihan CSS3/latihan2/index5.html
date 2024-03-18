@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradients</title>
+    <style>
+      div {
+        width: 200px;
+        height: 200px;
+        display: inline-block;
+        margin: 20px;
+      }
+
+      .kotak1 {
+        background-image: linear-gradient(lightblue, salmon, lightblue);
+      }
+
+      .kotak1:hover {
+        transform: translate(0, -20px);
+        transition: 0.6xs;
+      }
+
+      .kotak2 {
+        background-image: linear-gradient(
+          royalblue,
+          rgba(255, 56, 182, 0.8),
+          rgba(255, 174, 225, 0.6)
+        );
+      }
+
+      .kotak3 {
+        background-image: linear-gradient(
+          to left top,
+          royalblue 29%,
+          rgba(255, 56, 182, 0.8) 75%,
+          rgba(255, 174, 225, 0.6)
+        );
+      }
+      .kotak4 {
+        background-image: radial-gradient(circle, salmon, yellow);
+      }
+
+      .persegi {
+        width: 300px;
+        height: 200px;
+        display: inline-block;
+      }
+
+      .satu {
+        background-image: radial-gradient(
+          ellipse farthest-corner at top left,
+          salmon 5%,
+          lightblue
+        );
+      }
+      .dua {
+        background-image: radial-gradient(red, green, blue);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kotak1"></div>
+    <div class="kotak2"></div>
+    <div class="kotak3"></div>
+    <div class="kotak4"></div>
+    <div class="persegi satu"></div>
+    <div class="persegi dua"></div>
+  </body>
+</html>

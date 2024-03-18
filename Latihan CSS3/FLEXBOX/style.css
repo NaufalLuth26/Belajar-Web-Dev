@@ -1,0 +1,57 @@
+.container {
+  width: 550px;
+  height: 150px;
+  border: 5px solid #333;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  /* flex-direction: row; */
+  /* value (row | row-reverse | column |column-reverse) */
+  /* flex-wrap: wrap; */
+  /* Value flex-wrap: wrap | nowrap | wrap-reverse */
+  /* justify-content: center; */
+  /* Value Justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly */
+  align-items: flex-start;
+  /* Value Align-items: flex-start | flex-end | center | stretch | baseline */
+
+  /* align-content: ; */
+
+  /* valie align-content: flex-start | flex-end | center | stretch | space-between | space-around */
+
+  /* align-content berlaku apabila content dalam container lebih dari 1 baris */
+}
+
+.container div {
+  /* width: 120px; */
+  /* height: 120px; */
+  background-color: lightblue;
+  margin: 2px;
+  text-align: center;
+  /* line-height: 120px; */
+  flex-grow: 1;
+}
+
+/* ORDER ITEMS */
+.container div.tiga {
+  order: 1;
+  flex-grow: 2;
+}
+.container div.empat {
+  flex-grow: 1.3;
+  order: 2;
+}
+
+.container div.satu {
+  flex: 2.5;
+  order: 3;
+  align-self: center;
+
+  /* align-self digunakan untuk melakukan align per item terhadap cross axis */
+
+  /*value align-self: auto | flex-start | flex-end | center | baseline | stretch; */
+}
+.container div.dua {
+  flex: 5;
+  order: 4;
+}

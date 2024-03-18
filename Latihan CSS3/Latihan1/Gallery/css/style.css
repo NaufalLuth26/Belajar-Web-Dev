@@ -1,0 +1,239 @@
+/* FONT FAMILY POPPINS */
+@font-face {
+  font-family: "poppinsblack_italic";
+  src: url("../font/poppins-blackitalic-webfont.woff2") format("woff2"),
+    url("../font/poppins-blackitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppinsbold";
+  src: url("../font/poppins-bold-webfont.woff2") format("woff2"),
+    url("../font/poppins-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppinsextrabold";
+  src: url("../font/poppins-extrabold-webfont.woff2") format("woff2"),
+    url("../font/poppins-extrabold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "poppinsextrabold_italic";
+  src: url("../font/poppins-extrabolditalic-webfont.woff2") format("woff2"),
+    url("../font/poppins-extrabolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppinsmedium";
+  src: url("../font/poppins-medium-webfont.woff2") format("woff2"),
+    url("../font/poppins-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppinsmedium_italic";
+  src: url("../font/poppins-mediumitalic-webfont.woff2") format("woff2"),
+    url("../font/poppins-mediumitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppinssemibold";
+  src: url("../font/poppins-semibold-webfont.woff2") format("woff2"),
+    url("../font/poppins-semibold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "poppinssemibold_italic";
+  src: url("../font/poppins-semibolditalic-webfont.woff2") format("woff2"),
+    url("../font/poppins-semibolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* MAIN CSS */
+
+body {
+  font: 18px/36px poppinsmedium, poppins, arial, sans-serif;
+  background-color: rgb(220, 227, 240);
+}
+
+h1 {
+  font-family: poppinsbold;
+  font-size: 75px;
+  color: rgba(28, 31, 223, 0.603);
+  margin: 50px 0;
+  text-align: center;
+  text-shadow: 2px 4px 2px rgba(110, 110, 241, 0.603);
+}
+
+.container {
+  width: 600px;
+  padding: 20px;
+  height: auto;
+  background-color: rgb(230, 235, 248);
+  margin: 100px auto;
+  box-shadow: 0 0 2px 2px black;
+  border-radius: 20px;
+  text-align: none;
+}
+
+/* .gallery li {
+  margin: 5px 7px;
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid rgba(111, 113, 221, 0.603);
+} */
+
+.gallery li {
+  width: 120px;
+  height: 120px;
+  border: 5px solid rgba(111, 113, 221, 0.603);
+  float: left;
+  /* overflow: hidden; */
+  position: relative;
+  margin-right: 20px;
+}
+
+.gallery li,
+.gallery li img,
+.gallery li span {
+  border-radius: 50%;
+}
+.clear {
+  clear: both;
+}
+
+.gallery li span {
+  display: block;
+  font-family: poppinsbold;
+  width: 120px;
+  height: 120px;
+  background-color: rgba(200, 200, 200, 0.6);
+  position: absolute;
+  top: 0;
+  text-align: center;
+  font-size: 10px;
+  line-height: 120px;
+  color: grey;
+  text-shadow: 1px 1px 1px #ddd;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.gallery li a:hover span {
+  opacity: 1;
+}
+
+/* OVERLAY */
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 1s;
+  text-align: center;
+}
+
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.overlay img {
+  border: 2px solid white;
+}
+.gallery div img {
+  border-radius: 0%;
+  max-height: 100%;
+  margin-top: 100px;
+
+  /* position: relative; */
+}
+
+.overlay:target img {
+  animation: zoomfade 1s;
+  transition: 1s;
+}
+
+.overlay .close {
+  font-family: poppinsbold;
+  width: 60px;
+  height: 30px;
+  background-color: black;
+  color: white;
+  border-radius: 10%;
+  border: solid 2px white;
+  text-decoration: none;
+  font-size: 20px;
+  position: absolute;
+  z-index: 3;
+  top: 7%;
+  right: 47%;
+  opacity: 0;
+}
+
+.overlay:target .close {
+  animation: closeslide 1s 1s forwards;
+}
+
+/* NAVIGATION */
+
+.gallery .overlay .next,
+.gallery .overlay .prev {
+  width: 70px;
+  height: 120px;
+  background-image: url(../img/full/right-arrow.png);
+  position: absolute;
+  border: none;
+  text-indent: -9999px;
+  top: 40%;
+  margin-left: 50px;
+}
+
+.gallery .overlay .prev {
+  background-image: url(../img/full/left-arrow.png);
+  margin-left: -120px;
+}
+
+/* ANIMATION */
+@keyframes zoomfade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes closeslide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

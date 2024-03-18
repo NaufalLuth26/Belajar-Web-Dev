@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EM & REM</title>
+    <style>
+      body {
+        font-family: poppins;
+        text-align: center;
+        background-color: rgb(226, 226, 226);
+        line-height: 1.6;
+        min-height: 3000px;
+      }
+
+      h1 {
+        margin-top: 30px;
+        text-align: center;
+      }
+
+      .container {
+        width: 80%;
+        margin: auto;
+      }
+
+      .typography {
+        display: flex;
+      }
+      .typography .col {
+        flex: 1;
+        margin: 20px;
+      }
+
+      /* EM */
+      .col-em h2 {
+        font-size: 2em;
+      }
+
+      .col-em p {
+        font-size: 1.5em;
+      }
+
+      /* BUTTON */
+
+      .judul {
+        margin-bottom: 70px;
+      }
+
+      .btn {
+        width: 30px;
+        height: 25px;
+        color: white;
+        background-color: #333;
+        border-radius: 5%;
+        padding: 0.5em 1em;
+        margin: 1em;
+        text-decoration: none;
+      }
+
+      .btn-sm {
+        font-size: 0.75em;
+      }
+
+      .btn-lg {
+        font-size: 2em;
+      }
+
+      .btn:hover {
+        color: crimson;
+        background-color: rgb(255, 250, 250);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Typography</h1>
+      <div class="typography">
+        <div class="col col-em">
+          <h2>em</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Reprehenderit id eius expedita a minus sit voluptate asperiores
+            velit perferendis est nisi officia, eligendi hic voluptatibus
+            sapiente ipsum aperiam placeat libero voluptates possimus repellat
+            rem? Accusamus blanditiis ex hic, omnis nisi expedita, soluta
+            officia beatae temporibus qui, eaque magnam cupiditate! Doloremque
+            minima aut, voluptates consectetur incidunt, labore rerum minus
+            repellat non tempore blanditiis corrupti sint vel necessitatibus
+            molestias assumenda quia error quae cupiditate nihil illo dicta
+            autem.
+          </p>
+        </div>
+        <div class="col col-rem">
+          <h2>rem</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam fuga
+            molestias officia, eius necessitatibus adipisci dolore hic nulla.
+            Dolore odit omnis ab ratione porro? Quis reprehenderit iure
+            temporibus modi earum. Lorem ipsum, dolor sit amet consectetur
+            adipisicing elit. Aliquam explicabo ipsam dicta minus, voluptate cum
+            ratione consequatur sapiente expedita, eum quasi, impedit ab minima?
+            Ut repudiandae velit nihil optio! Veniam.
+          </p>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <h2 class="judul">Button with em & rem</h2>
+        <a href="" class="btn">Tekan!</a>
+        <a href="" class="btn btn-sm">Tekan!</a>
+        <a href="" class="btn btn-lg">Tekan!</a>
+      </div>
+    </div>
+  </body>
+</html>

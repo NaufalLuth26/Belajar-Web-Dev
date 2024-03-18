@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <style>
+            .kotak {
+              width: 100px;
+              height: 100px;
+              background-color: salmon;
+              margin-top: 10px;
+              color: white;
+              text-align: center;
+              line-height: 100px;
+            }
+            /* ANIMASI MENGGUNAKAN PROPERTY TRANSITION */
+
+            .kotak1 {
+              transition: all 2s ease;
+              /* TAMBAHKAN TRANSISI PADA SELECTOR CSS KEADAAN NORMAL AGAR TRANSISI BERJALAN DENGAN HALUS */
+            }
+            .kotak1:hover {
+              width: 300px;
+            }
+
+            /* ANIMASI MENGGUNAKAN PROPERTY ANIMATION */
+
+            .kotak2:hover {
+              animation: kotak2 2s ease;
+            }
+
+            /* CONTOH ANIMASI TANPA TRIGGER/MENGGUNAKAN PSEUDO-CLASS (:hover, :active dll) */
+
+            .kotak3 {
+              animation: kotak3 3s ease infinite  forwards ;
+            }
+
+            @keyframes kotak2 {
+              from {
+                width: 100px;
+              }
+              to {
+                width: 300px;
+              }
+            }
+
+            @keyframes kotak3 {
+              0%,
+              100% {
+                width: 100px;
+              }
+              50% {
+                width: 100px;
+                transform: translateX(300px);
+              }
+              75% {
+                height: 100px;
+                transform: translateY(50px) translateX(300px);
+              }
+
+      /* * @keyframes duration | easing-function | delay |
+      iteration-count | direction | fill-mode | play-state | name */
+      animation: 3s ease-in 1s 2 reverse both paused slidein;
+
+      /* @keyframes duration | easing-function | delay | name */
+      animation: 3s linear 1s slidein;
+
+      /* two animations */
+      animation:
+        3s linear slidein,
+        3s ease-out 5s slideout; */
+            }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="kotak kotak1">Transition</div>
+      <div class="kotak kotak2">Animation</div>
+      <div class="kotak kotak3">Animation</div>
+    </div>
+  </body>
+</html>

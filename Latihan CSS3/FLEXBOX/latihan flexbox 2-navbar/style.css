@@ -1,0 +1,156 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Main CSS */
+
+body {
+  font-family: poppins, Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  background-color: rgb(144, 198, 216);
+  justify-content: space-around;
+  /* padding: 20px 0; */
+  height: 50px;
+  color: rgba(252, 253, 255, 1);
+  align-items: center;
+}
+
+nav .logo a {
+  color: rgba(252, 253, 255, 1);
+  font-family: Pacifico, cursive;
+  letter-spacing: 3px;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 40%;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: rgba(252, 253, 255, 1);
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+nav ul li a:hover {
+  color: rgb(255, 90, 145);
+}
+
+/* MENU TOGGLE */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -1px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: rgba(252, 253, 255, 1);
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+/* HAMBURGER MENU ANIAMATION */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+.menu-toggle input:checked ~ span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+.menu-toggle input:checked ~ span:nth-child(4) {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+.menu-toggle input:checked ~ span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+/* MAIN CONTENT */
+main .container {
+  display: flex;
+  width: 900px;
+  background-color: rgb(164, 185, 185);
+  margin: auto;
+  flex-direction: column;
+}
+
+header {
+}
+header h1 {
+  margin-top: 50px;
+  display: flex;
+  color: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+}
+
+main section .content {
+  padding: 30px;
+  text-indent: 40px;
+  box-sizing: border-box;
+}
+/* Responsive Breakpoint */
+
+/* Tablet */
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+/* ukuran mobile */
+
+@media screen and (max-width: 576px) {
+  .menu-toggle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(144, 198, 216);
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 0.5s;
+    opacity: 0;
+  }
+
+  nav ul.slide {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
