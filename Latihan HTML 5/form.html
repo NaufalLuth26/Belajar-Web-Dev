@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validitas</title>
+    <style>
+      body {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      form {
+        width: 600px;
+        padding: 5px;
+      }
+      label {
+        display: block;
+        margin: 2px;
+      }
+
+      button {
+        margin-top: 15px;
+      }
+
+      /* CONTOH VALIDASI WARNA SALAH MELALUI CSS */
+
+      input:invalid {
+        border: none;
+        outline: 2px solid red;
+        border-radius: 2px;
+      }
+
+      input:valid {
+        border: 1px solid black;
+        outline: inherit;
+        border-radius: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="" method="post" autocomplete="off">
+      <div>
+        <label for="nama">Masukan Nama Lengkap</label>
+        <input
+          type="text"
+          name="nama"
+          id="nama"
+          autofocus
+          required
+          maxlength="25"
+          oninvalid="this.setCustomValidity('kolom ini harus diisi!')"
+          ;
+          oninput="this.setCustomValidity('')"
+          ;
+        />
+
+        <!-- CONTOH VALIDATION JAVASCRIPT KETIKA KOSONG -->
+      </div>
+
+      <div>
+        <label for="email">Masukan Email</label>
+        <input type="email" name="email" id="email" />
+      </div>
+
+      <div>
+        <label for="password">Masukan Password</label>
+        <input type="password" name="nama" id="password" />
+      </div>
+
+      <div>
+        <label for="nohp"> Nomor Handphone</label>
+        <input type="tel" name="nohp" id="nohp" />
+      </div>
+
+      <div>
+        <label for="angka">Masukan Angka</label>
+        <input type="number" name="angka" id="angka" />
+      </div>
+
+      <div>
+        <label for="tanggal">Masukan Tanggal lahir</label>
+        <input type="date" name="tanggal" id="tanggal" />
+      </div>
+
+      <div>
+        <label for="warna">Pilih warna</label>
+        <input type="color" name="warna" id="warna" />
+        <span class="hexa"></span>
+      </div>
+
+      <div>
+        <button type="submit">Kirim!</button>
+      </div>
+    </form>
+
+    <!-- CONTOH JAVASCRIPT VALIDASI DAN  MANIPULASI UNTUK WARNA DAN NUMBER -->
+    <script>
+      const nama = document.querySelector("#nama");
+
+      nama.addEventListener("input", function () {
+        oninvalid = "nama.setCustomValidity('kolom ini harus diisi!')";
+        oninput = "nama.setCustomValidity('')";
+      });
+      const warna = document.querySelector("#warna");
+      const hexa = document.querySelector(".hexa");
+
+      hexa.innerHTML = warna.value;
+
+      warna.addEventListener("input", function () {
+        hexa.innerHTML = warna.value;
+        hexa.style.color = warna.value;
+      });
+    </script>
+  </body>
+</html>

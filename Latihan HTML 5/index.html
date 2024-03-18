@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .body {
+      font-family: sans-serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.125em;
+      line-height: 1.6;
+      color: #333;
+      padding: 2em;
+    }
+
+    .hero {
+      display: grid;
+      grid-gap: 2em;
+      align-items: center;
+    }
+    .hero-text {
+      font-family: "Poppins";
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media (min-width: 960px) {
+      .hero {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+
+  <body>
+    <!-- SRCSET -->
+    <div class="hero">
+      <div class="hero-text">
+        <h1>IMAGE SOURCESET</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente
+          harum delectus eum? Ipsa quo recusandae odit eveniet odio aut animi
+          molestiae numquam eligendi magni repellendus nemo ipsum, quasi
+          accusantium cumque?
+        </p>
+      </div>
+      <picture>
+        <source
+          media="(min-width: 900px)"
+          srcset="img2/CAT-LARGE.jpg"
+          sizes="50vw"
+        />
+        <source media="(min-width: 600px)" srcset="img2/CAT-MED.jpg" />
+        <img src="img2/CAT-SMALL.jpg" alt="kucing" width="300" />
+      </picture>
+    </div>
+    <!-- INI conton Audio dan Video -->
+    <!-- <audio src="audio/Ulang tahun-jamrud.mp3" controls loop> -->
+    <figure class="Audio">
+      <figcaption>Dengarkan Lagu ini</figcaption>
+      <audio controls loop>
+        <source src="audio/Ulang tahun-jamrud.mp3" type="audio/mpeg" />
+        audio tidak adapat digunakan tag <code>audio</code>
+      </audio>
+    </figure>
+    <!-- Cara Pertama -->
+    <figure class="video">
+      <figcaption>Tonton Video dibawah ini</figcaption>
+      <video src="video/pake-qris.mp4" width="300" controls autoplay>
+        video ini tidak disupport oleh browser <code>video</code>
+      </video>
+    </figure>
+    <!-- INI CONTOH CARA MASUKIN VIDEO KEDUA -->
+    <figure class="video2">
+      <figcaption>Ini contoh video kedua</figcaption>
+      <video controls autoplay width="300px">
+        <source
+          src="video/Zoom Meeting 2023-10-13 19-50-19.mp4"
+          type="video/mp4"
+        />
+        <source src="video/pake-qris.mp4" type="video/mp4" />
+      </video>
+    </figure>
+  </body>
+</html>

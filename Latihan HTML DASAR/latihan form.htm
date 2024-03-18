@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naufal's</title>
+</head>
+<body>
+    <h1 align="center">BELAJAR FORM</h1>
+        <form>
+            <label for="username"><strong>Username :</strong></label>  
+            <input type="text" id="username">
+            <br><br>
+            <label for="password"><strong>Password :</strong></label>  
+            <input type="password" id="password">
+            <br><br>
+            <!-- UNTUK RADIO PENTING UNTUK DITAMBAHKAN ID DAN ATTRIBUTE NAME (AGAR 
+                BISA DIPILIH SALAH SATU) -->
+            <input type="radio" id="pria" name="jeniskelamin"><label for="pria">Pria</label>
+            <input type="radio" id="wanita" name="jeniskelamin"><label for="wanita">Wanita</label>
+                <br><br>
+                <!-- UNTUK CHECKBOX TAMBAHKAN ID DAN LABEL -->
+            <input type="checkbox" id="menyanyi"><label for="menyanyi">menyanyi</label>
+            <input type="checkbox" id="berenang"><label for="berenang">berenang</label><br>
+            <input type="checkbox" id="membaca"><label for="membaca">membaca</label>
+            <input type="checkbox" id="memasak"><label for="memasak">memasak</label>
+            <br>
+            <!-- TEXT AREA(KOMENTAR/MASUKAN DLL) -->
+            <textarea name="komentar" id="komentar" cols="30" rows="10"></textarea>
+            <br>
+            <!-- SELECT (COMBOBOX, DROPDOWN) -->
+            <select name="kota" id="kota">
+                <option value="Serang">Serang</option>
+                <option value="Cilegon">Cilegon</option>
+                <option value="Pandeglang">Pandeglang</option>
+                <option value="Tangerang">Tangerang</option>
+                <option value="Lebak">Lebak</option>
+            </select>
+            
+            <br><br>
+
+            <button type="submit">Kirim</button>
+            <button type="reset">Reset data</button>
+        </form>
+    <a href="index.html">Kembali ke Halaman awal</a>
+    <br>
+    <a href="Latihan form2.html">Pergi ke form selanjutnya</a>
+</body>
+</html>

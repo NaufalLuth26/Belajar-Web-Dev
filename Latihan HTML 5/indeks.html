@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        min-height: 1000px;
+      }
+      svg {
+        display: block;
+        margin: 20px;
+      }
+      .kotak {
+        background-color: #ecebeb;
+        width: 500px;
+        height: 250px;
+      }
+      .kotak1 {
+        width: 200px;
+        height: 200px;
+        fill: salmon;
+        x: 150px;
+        y: 150px;
+      }
+      .kotak2 {
+        width: 100px;
+        height: 100px;
+        fill: lightblue;
+        x: 80px;
+        y: 80px;
+      }
+    </style>
+  </head>
+  <body>
+    <svg class="kotak" viewbox="0 0 500 500">
+      <rect class="kotak1" />
+    </svg>
+
+    <svg class="kotak">
+      <rect class="kotak2" />
+      <circle r="50" cx="130" cy="130" />
+      <rect width="40" height="40" x="110" y="110" fill="red" />
+    </svg>
+    <svg class="kotak">
+      <path fill="none" stroke="black" d="M 60, 10 L 110, 90 H 10 L 60, 10" />
+
+      <path fill="none" stroke="black" d="m 140,10 l 0,90 h 90 v -90 h -90" />
+
+      <path fill="none" stroke="black" d="m 250,10 l 0,90 L 90, v -90 h -90" />
+    </svg>
+
+    <!-- ATAU GUNAKAN FILE DENGAN EKSTENSI SVG. COPY CODE SVG KE HTML -->
+  </body>
+</html>
