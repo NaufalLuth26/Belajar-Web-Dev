@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS GRID | Repeat()</title>
+    <style>
+      hmtl,
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #ddd;
+      }
+      .container {
+        width: 60%;
+        margin: 50px auto;
+        display: grid;
+        /* Contoh penggunaan repeat. repeat bisa didouble ex */
+        /* contoh penggunaan 1 repeat */
+        grid-template-columns: repeat(10, 1fr);
+        /* contoh pengunaan 2/3 repeat */
+        grid-template-columns: repeat(5, 1fr) repeat(3, 1.5fr) repeat(2, 2.5fr);
+
+        grid-auto-flow: none;
+      }
+      .item {
+        background-color: rgba(138, 209, 254, 1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .item:nth-child(even) {
+        background-color: rgb(253, 159, 187);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+    </div>
+  </body>
+</html>

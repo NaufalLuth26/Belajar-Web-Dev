@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan 1 CSS Grid</title>
+    <style>
+      .container {
+        width: 800px;
+      }
+      body {
+        color: white;
+        text-align: center;
+      }
+      .header {
+        width: 100%;
+        height: 120px;
+        background-color: purple;
+      }
+
+      .main {
+        width: 500px;
+        height: 500px;
+        background-color: burlywood;
+        position: relative;
+        float: right;
+      }
+
+      .second {
+        width: 300px;
+        position: relative;
+        float: left;
+      }
+      .aside {
+        width: 300px;
+        height: 200px;
+        background-color: royalblue;
+        float: left;
+      }
+      .navbar {
+        width: 300px;
+        height: 300px;
+        background-color: salmon;
+        float: left;
+      }
+      .footer {
+        width: 800px;
+        height: 80px;
+        background-color: gray;
+      }
+
+      .clear {
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">HEADER</div>
+      <div class="main cr">MAIN</div>
+      <div class="second">
+        <div class="aside">ASIDE</div>
+        <div class="navbar">NAVBAR</div>
+      </div>
+      <div class="clear"></div>
+      <div class="footer">FOOTER</div>
+    </div>
+  </body>
+</html>

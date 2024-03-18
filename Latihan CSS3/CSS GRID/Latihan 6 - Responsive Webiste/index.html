@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kucing-Kucing Lucu</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="hero">
+          <h2 class="heading">Dunia Kucing</h2>
+          <p class="sub-heading">Cat Cute & Funny</p>
+        </div>
+        <div class="features feature-1">
+          <h4 class="price">IDR 400K</h4>
+          <p class="item">Persia</p>
+        </div>
+        <div class="features feature-2">
+          <h4 class="price">IDR 500K</h4>
+          <p class="item">Orange</p>
+        </div>
+      </header>
+      <nav class="menu">
+        <div class="menu-toggle">
+          <input type="checkbox" name="" id="" />
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="brand">
+          <h2>Dunia Kucing</h2>
+        </div>
+        <list class="menu-list">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Species</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Gallery</a></li>
+          </ul>
+        </list>
+      </nav>
+      <section class="services">
+        <div class="service">
+          <div class="icon">🐈</div>
+          <h3>Gallery</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+            repellat debitis quis excepturi exercitationem nihil
+          </p>
+        </div>
+        <div class="service">
+          <div class="icon">😺</div>
+          <h3>Online Lookout</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+            repellat debitis quis excepturi exercitationem nihil
+          </p>
+        </div>
+        <div class="service">
+          <div class="icon">🐈‍⬛</div>
+          <h3>Cat's Diet</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+            repellat debitis quis excepturi exercitationem nihil
+          </p>
+        </div>
+      </section>
+      <section class="gallery">
+        <h2>Gallery</h2>
+        <img src="img/full/Kucing1.png" alt="kucing" loading="lazy" />
+        <img src="img/full/Kucing2.png" alt="kucing" loading="lazy" />
+        <img src="img/full/Kucing3.png" alt="kucing" loading="lazy" />
+        <img src="img/full/Kucing4.png" alt="kucing" loading="lazy" />
+        <img src="img/full/Kucing1.png" alt="kucing" loading="lazy" />
+        <img src="img/full/Kucing2.png" alt="kucing" loading="lazy" />
+        <img src="img/full/Kucing3.png" alt="kucing" loading="lazy" />
+        <img src="img/full/Kucing4.png" alt="kucing" loading="lazy" />
+        <img src="img/full/Kucing1.png" alt="kucing" loading="lazy" />
+        <img src="img/full/Kucing2.png" alt="kucing" loading="lazy" />
+      </section>
+    </div>
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav ul");
+
+      menuToggle.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+  </body>
+</html>
